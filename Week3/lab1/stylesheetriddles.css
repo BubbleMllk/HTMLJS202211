@@ -1,9 +1,15 @@
-body{ 
+body {
     background-color: antiquewhite;
 }
 
-p{
+p {
     font-family: Georgia, 'Times New Roman', Times, serif, Times, serif;
- color: blueviolet;
+    color: blueviolet;
 }
 
+h1 {
+    text-align: center;
+    color: brown;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border: 1px solid brown;
+}
