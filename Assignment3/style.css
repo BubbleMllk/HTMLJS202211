@@ -1,0 +1,12 @@
+#container{
+    font-family: 'Courier New', Courier, monospace;
+    color: brown;
+    text-align: center;
+}
+
+body{
+    background-color: antiquewhite;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    color: black;
+    font-size: small;
+}
