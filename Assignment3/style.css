@@ -2,6 +2,8 @@
     font-family: 'Courier New', Courier, monospace;
     color: brown;
     text-align: center;
+    width: 970px;
+    padding: 10px;
 }
 
 body{
@@ -9,4 +11,17 @@ body{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
     color: black;
     font-size: small;
+}
+
+h1{
+    width: 950 pixels;
+    padding: 10px;
+    text-align: center;
+    background-color: whitesmoke;
+    border: 2px cornflowerblue;
+}
+
+img{
+    color: black;
+    border: 10px cornflowerblue;
 }
