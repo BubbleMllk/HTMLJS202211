@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 | Layout, Position, and Semantic elements</title>
+    <style> 
+    body{
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+    #container{
+        margin: auto;
+        background-color: grey;
+        width: 1000px;
+        height: 850px;
+        border: 1px solid red;
+     }
+    header{
+        width: 100%;
+        height: 100px;
+        background-color: beige;
+        padding: 1px;
+        text-align: center;
+     }
+    nav{
+        width: 100%;
+        height: 50px;
+        background-color: purple;
+    }
+    section{
+        float: left;
+        width: 65%;
+        height: 300px;
+        background-color: brown;
+    }
+    article{
+        float: left;
+        width: 65%;
+        height: 300px;
+        background-color: aquamarine;
+    }
+    aside{
+        float: right;
+        margin-top: -300px;
+        width: 35%;
+        height: 600px;
+        background-color: cadetblue;
+    }
+    footer{
+        clear: both;
+        width: 100%;
+        height: 100px;
+        background-color: coral;
+    }
+
+
+    </style>
+
+</head>
+
+<body>
+    <div id="container"> 
+        <!--All of out content will go here-->
+        <header> 
+            <h2> Week 4 Day 1 | CSS Position Layout Lab </h2>
+            <p id="clicks"></p>
+        </header>
+        <nav> 
+            <a href="#" class="btn"> Home </a>
+            <a href="#" class="btn"> Page 2 </a>
+            <script>
+                var clicks = 0;
+
+                function updateClicks(){
+                    clicks+=1;
+                    document.getElementById("Clicks").innerHTML = clicks.toString();
+                }
+            </script>
+            <button onclick= "updateClicks()"> Click this button </button>
+        </nav>
+        <section> 
+            Section 
+        </section>
+        <article> 
+            Article
+        </article>
+        <aside>
+            Aside 
+        </aside>
+        <footer>
+            Footer 
+        </footer>
+
+
+    </div>
+
+
+</body>
+</html>
