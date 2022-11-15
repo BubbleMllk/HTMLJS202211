@@ -4,11 +4,11 @@ var ctx = canvas.getContext("2d")
 
 
 //Drawing the fonts
-ctx.font = "40px Arial"
-ctx.fillStyle = "blue"
-ctx.strokeStyle = "green"
+ctx.font = "40px Times New Roman"
+ctx.fillStyle = "black"
+//ctx.strokeStyle = "green"
 ctx.fillText("Welcome to the RPS Game!" , 125, 280)
-ctx.strokeText("Welcome to the RPS Game!" , 125, 280)
+//ctx.strokeText("Welcome to the RPS Game!" , 125, 280)
 
 
 
