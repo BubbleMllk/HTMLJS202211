@@ -97,7 +97,7 @@ else{
 //brackets are used to do collections
 
 var rps = ["rock", "paper", "scissors", "lizard", "spock"]
-console.log(rps[0])
+console.log(rps[0,4])
 
 
 
