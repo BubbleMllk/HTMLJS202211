@@ -5,15 +5,15 @@ var ctx = canvas.getContext("2d")
 
 var timer = requestAnimationFrame(main)
 
-var start = 50
-var finish = 750
+var start = 58
+var finish = 956
 var carPos = 2
 var speed = 3
 var carWidth = 50
 
 var startfuel = randomNumber(canvas.width, 600)
 var fuel = startfuel
-var fuelBarWidth = 300
+var fuelBarWidth = 512
 var gameOver = true
 
 var seconds = 3
@@ -22,7 +22,15 @@ var frames = fps
 
 //load game sprites
 var carSprite = new Image()
-carSprite.src = "images/carPNG.png"
+carSprite.src = "images/doggyy.png"
+
+var hse = new Image()
+hse.src = "images/house.png"
+
+//ctx.fillRect(finish, 50, 10, 500)
+//finish = 956
+
+
 
 carSprite.onload = function () {
     main()
@@ -48,9 +56,9 @@ function main() {
 
     if (gameOver) {
         ctx.fillStyle = "black"
-        ctx.font = "30px Arial"
+        ctx.font = "30px Verdana"
         ctx.textAlign = "center"
-        ctx.fillText("Press Space to Start", canvas.width / 2, canvas.height / 2)
+        ctx.fillText("Press Space to get your dog to race to the house!", canvas.width / 2, canvas.height / 2)
 
     }
     else {
@@ -65,9 +73,10 @@ function main() {
             }
 
         }
-
+        drawhouse()
         drawStartFinish()
         drawCar()
+
 
 
         drawFuelBar()
@@ -94,6 +103,15 @@ function drawCar() {
     ctx.drawImage(carSprite, carPos, canvas.height / 2, carWidth, 20);
 
 }
+function drawhouse() {
+    //draw a car
+    //ctx.fillStyle = "red"
+    // ctx.fillRect(carPos, canvas.height / 2, carWidth, 20)
+    hse.onload = function () {
+        ctx.drawImage(finish, 50, 10, 500)
+    }
+
+}
 
 function drawFuelBar() {
 
@@ -101,8 +119,8 @@ function drawFuelBar() {
     ctx.fillStyle = "black"
     ctx.fillRect(start, 30, fuelBarWidth, 10)
 
-    ctx.font = "25px Arial"
-    ctx.fillText("Fuel", start, 25)
+    ctx.font = "25px Verdana"
+    ctx.fillText("Energy", start, 25)
 
     if (fuel > 0) {
         ctx.fillStyle = "green"
@@ -115,17 +133,17 @@ function drawFuelBar() {
 function drawResults() {
     if (carPos + carWidth > finish) {
         ctx.fillStyle = "black"
-        ctx.font = "25px Arial"
+        ctx.font = "25px Verdana"
         ctx.textAlign = "center"
-        ctx.fillText("You made it to the finish...You win!", canvas.width / 2, canvas.height / 2)
+        ctx.fillText("Dog made it to the finish...You win!", canvas.width / 2, canvas.height / 2)
 
 
     }
     else {
         ctx.fillStyle = "black"
-        ctx.font = "25px Arial"
+        ctx.font = "25px Verdana"
         ctx.textAlign = "center"
-        ctx.fillText("You ran out of fuel...You lose!", canvas.width / 2, canvas.height / 2)
+        ctx.fillText("Your dog ran out of energy...You lose!", canvas.width / 2, canvas.height / 2)
     }
 }
 
@@ -136,7 +154,8 @@ function drawStartFinish() {
     ctx.fillRect(start, 50, 10, 500)
 
     //finishline
-    ctx.fillRect(finish, 50, 10, 500)
+
+   // ctx.fillRect(finish, 50, 10, 500)
 }
 
 function restartGame() {
@@ -145,7 +164,7 @@ function restartGame() {
 
 function runStartTimer() {
     ctx.fillStyle = "black"
-    ctx.font = "25px Arial"
+    ctx.font = "25px Verdana"
     ctx.textAlign = "center"
     ctx.fillText(seconds, canvas.width / 2, canvas.height / 2)
 }
