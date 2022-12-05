@@ -5,10 +5,10 @@ var ctx = canvas.getContext("2d")
 
 var timer = requestAnimationFrame(main)
 
-var start = 58
+var start = 100
 var finish = 956
 var carPos = 2
-var speed = 3
+var speed = 1
 var carWidth = 50
 
 var startfuel = randomNumber(canvas.width, 600)
@@ -74,7 +74,7 @@ function main() {
 
         }
         drawhouse()
-        drawStartFinish()
+        //drawStartFinish()
         drawCar()
 
 
@@ -118,15 +118,16 @@ function drawFuelBar() {
     ctx.fillRect(start, 30, fuelBarWidth, 10)
 
     ctx.font = "25px Verdana"
-    ctx.fillText("Energy", start, 25)
+    ctx.fillText("Energy Level", start, 25)
 
     if (fuel > 0) {
-        ctx.fillStyle = "green"
+        ctx.fillStyle = "yellow"
         ctx.fillRect(start, 30, currentBarWidth, 10)
 
     }
 
 }
+
 
 function drawResults() {
     if (carPos + carWidth > finish) {
@@ -145,16 +146,16 @@ function drawResults() {
     }
 }
 
-function drawStartFinish() {
-    ctx.fillStyle = "black"
+// function drawStartFinish() {
+//     ctx.fillStyle = "black"
 
-    //startline
-    ctx.fillRect(start, 50, 10, 500)
+//     //startline
+//  //   ctx.fillRect(start, 50, 10, 500)
 
-    //finishline
+//     //finishline
 
-    //ctx.fillRect(finish, 50, 10, 500)
-}
+//     //ctx.fillRect(finish, 50, 10, 500)
+// }
 
 function restartGame() {
     location.reload()
