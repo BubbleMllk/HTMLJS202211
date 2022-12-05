@@ -8,8 +8,8 @@ var timer = requestAnimationFrame(main)
 var start = 100
 var finish = 956
 var carPos = 2
-var speed = 1
-var carWidth = 50
+var speed = 5
+var carWidth = 30
 
 var startfuel = randomNumber(canvas.width, 600)
 var fuel = startfuel
