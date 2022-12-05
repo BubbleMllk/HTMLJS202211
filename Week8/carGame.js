@@ -58,7 +58,7 @@ function main() {
         ctx.fillStyle = "black"
         ctx.font = "30px Verdana"
         ctx.textAlign = "center"
-        ctx.fillText("Press Space to get your dog to race to the house!", canvas.width / 2, canvas.height / 2)
+        ctx.fillText("Press Space! Get your dog to race to the door!", canvas.width / 2, canvas.height / 2)
 
     }
     else {
@@ -103,13 +103,11 @@ function drawCar() {
     ctx.drawImage(carSprite, carPos, canvas.height / 2, carWidth, 20);
 
 }
+
 function drawhouse() {
-    //draw a car
-    //ctx.fillStyle = "red"
-    // ctx.fillRect(carPos, canvas.height / 2, carWidth, 20)
-    hse.onload = function () {
-        ctx.drawImage(finish, 50, 10, 500)
-    }
+
+        ctx.drawImage(hse, 900, canvas.height / 2.5, 100, 100)
+
 
 }
 
@@ -155,7 +153,7 @@ function drawStartFinish() {
 
     //finishline
 
-   // ctx.fillRect(finish, 50, 10, 500)
+    //ctx.fillRect(finish, 50, 10, 500)
 }
 
 function restartGame() {
