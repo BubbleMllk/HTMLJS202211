@@ -27,6 +27,9 @@ carSprite.src = "images/doggyy.png"
 var hse = new Image()
 hse.src = "images/house.png"
 
+var bowl = new Image()
+bowl.src = "images/bowl.png"
+
 //ctx.fillRect(finish, 50, 10, 500)
 //finish = 956
 
@@ -76,7 +79,7 @@ function main() {
         drawhouse()
         //drawStartFinish()
         drawCar()
-
+        drawbowl()
 
 
         drawFuelBar()
@@ -98,7 +101,7 @@ function main() {
 
 function drawCar() {
     //draw a car
-    ctx.fillStyle = "red"
+    //ctx.fillStyle = "red"
     // ctx.fillRect(carPos, canvas.height / 2, carWidth, 20)
     ctx.drawImage(carSprite, carPos, canvas.height / 2, carWidth, 20);
 
@@ -111,14 +114,24 @@ function drawhouse() {
 
 }
 
+function drawbowl(){
+   // ctx.drawImage(bowl, 30, canvas.height / 2, 10)
+}
+
 function drawFuelBar() {
 
     var currentBarWidth = fuelBarWidth * (fuel / startfuel)
     ctx.fillStyle = "black"
     ctx.fillRect(start, 30, fuelBarWidth, 10)
+    
 
     ctx.font = "25px Verdana"
     ctx.fillText("Energy Level", start, 25)
+
+    //outline title
+    ctx.strokeStyle = "green"
+    ctx.font = "25px Verdana"
+    ctx.strokeText("Energy Level", start, 25)
 
     if (fuel > 0) {
         ctx.fillStyle = "yellow"
