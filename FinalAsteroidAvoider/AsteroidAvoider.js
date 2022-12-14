@@ -35,6 +35,12 @@ imgmenu.onload = function(){
     main();
 }
 
+var endgame = new Image()
+endgame.src = "images/endgame.png"
+
+endgame.onload = function(){
+    main();
+}
 // function drawmenu() {
 //     ctx.drawImage(imgmenu, 0, 0, canvas.width, canvas.height)
 // }
@@ -309,12 +315,17 @@ gameStates[2] = function(){
         ctx.save()
         ctx.drawImage(imgmenu,0,0, canvas.width, canvas.height)
         ctx.font = "30px Arial"
+        ctx.strokeStyle = "white"
         ctx.fillStyle = "black"
         ctx.textAlign = "center"
+        ctx.strokeText("Game Over, your high score score was: " + score.toString() , canvas.width/2, canvas.height/2-60)
         ctx.fillText("Game Over, your high score score was: " + score.toString() , canvas.width/2, canvas.height/2-60)
+        ctx.strokeText("Your new high score is: " + highScore.toString() , canvas.width/2, canvas.height/2-30)
         ctx.fillText("Your new high score is: " + highScore.toString() , canvas.width/2, canvas.height/2-30)
+        ctx.strokeText("New Record", canvas.width/2, canvas.height/2)
         ctx.fillText("New Record", canvas.width/2, canvas.height/2)
         ctx.font = "15px Arial"
+        ctx.strokeText("Press Space to Play Again", canvas.width/2, canvas.height/2 + 20)
         ctx.fillText("Press Space to Play Again", canvas.width/2, canvas.height/2 + 20)
         ctx.restore()
 
@@ -324,10 +335,14 @@ gameStates[2] = function(){
         ctx.drawImage(imgmenu,0,0, canvas.width, canvas.height)
         ctx.font = "30px Arial"
         ctx.fillStyle = "black"
+        ctx.strokeStyle = "white"
         ctx.textAlign = "center"
+        ctx.strokeText("Game Over, your score was: " + score.toString() , canvas.width/2, canvas.height/2-60)
         ctx.fillText("Game Over, your score was: " + score.toString() , canvas.width/2, canvas.height/2-60)
+        ctx.strokeText("Your high score is: " + highScore.toString() , canvas.width/2, canvas.height/2-30)
         ctx.fillText("Your high score is: " + highScore.toString() , canvas.width/2, canvas.height/2-30)
         ctx.font = "15px Arial"
+        ctx.strokeText("Press Space to Play Again", canvas.width/2, canvas.height/2 + 20)
         ctx.fillText("Press Space to Play Again", canvas.width/2, canvas.height/2 + 20)
         ctx.restore()
     }

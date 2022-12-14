@@ -6,9 +6,9 @@ html,body{
 }
 
 #canvas{
-    border: 5px solid rgb(226, 158, 255);
+    border: 5px solid rgb(255, 158, 218);
     justify-content: center;
-
+    background-image: url("images/purspace.png")
     
 }
 
@@ -25,7 +25,7 @@ h1 {
 
 }
 #container{
-    background-color: rgb(91, 49, 122);
+    background-color: rgb(122, 49, 85);
 }
 
 footer{
