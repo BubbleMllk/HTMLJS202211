@@ -1,0 +1,33 @@
+html,body{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    background-image: url("images/space.png");
+}
+
+#canvas{
+    border: 5px solid rgb(226, 158, 255);
+    justify-content: center;
+
+    
+}
+
+header{
+    font-family: 'Xanh Mono', monospace;
+    
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: brown;
+    font-family: 'Kalam', cursive;
+
+}
+#container{
+    background-color: rgb(230, 195, 255);
+}
+
+footer{
+    text-align: center;
+}
