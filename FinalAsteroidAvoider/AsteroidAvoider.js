@@ -10,6 +10,7 @@ var currentState = 0
 var score = 0
 var highScore = 0
 
+//image for rocket ship
 var Rship = new Image()
 Rship.src = "images/rocketship.png"
 
@@ -17,6 +18,26 @@ function drawrocket(){
     ctx.drawImage(Rship,-10, 10, 30, 30)
 }
 
+//image for meteors
+var metor = new Image()
+metor.src = "images/meteor.png"
+
+// function drawmeteor(){
+//     ctx.drawImage(metor,10,10)
+// }
+
+
+//image for main menu
+var imgmenu = new Image()
+imgmenu.src = "images/mainmenu.png"
+
+imgmenu.onload = function(){
+    main();
+}
+
+// function drawmenu() {
+//     ctx.drawImage(imgmenu, 0, 0, canvas.width, canvas.height)
+// }
 
 //utility functions
 function randomRange(high, low){
@@ -46,6 +67,7 @@ function Asteroid(){
         ctx.beginPath()
         ctx.fillStyle = this.color
         ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI, true)
+        //drawmeteor()
         ctx.closePath()
         ctx.fill()
         ctx.restore()
@@ -209,8 +231,9 @@ function PlayerShip(){
 //Main Screen
 gameStates[0] = function(){
     ctx.save()
+    ctx.drawImage(imgmenu,0,0, canvas.width, canvas.height)
     ctx.font = "30px Arial"
-    ctx.fillStyle = "white"
+    ctx.fillStyle = "black"
     ctx.textAlign = "center"
     ctx.fillText("Asteroid Avoider", canvas.width/2, canvas.height/2-30)
     ctx.font = "15px Arial"
@@ -224,7 +247,7 @@ gameStates[1] = function(){
     //code for displaying score
     ctx.save()
     ctx.font = "15px Arial"
-    ctx.fillStyle = "white"
+    ctx.fillStyle = "black"
     ctx.fillText("Score: " + score.toString(), canvas.width - 150, 30)
     ctx.restore()
 
@@ -284,8 +307,9 @@ gameStates[2] = function(){
         //set a new high score
         highScore = score
         ctx.save()
+        ctx.drawImage(imgmenu,0,0, canvas.width, canvas.height)
         ctx.font = "30px Arial"
-        ctx.fillStyle = "white"
+        ctx.fillStyle = "black"
         ctx.textAlign = "center"
         ctx.fillText("Game Over, your high score score was: " + score.toString() , canvas.width/2, canvas.height/2-60)
         ctx.fillText("Your new high score is: " + highScore.toString() , canvas.width/2, canvas.height/2-30)
@@ -297,8 +321,9 @@ gameStates[2] = function(){
     }else{
         //keep same score new high score
         ctx.save()
+        ctx.drawImage(imgmenu,0,0, canvas.width, canvas.height)
         ctx.font = "30px Arial"
-        ctx.fillStyle = "white"
+        ctx.fillStyle = "black"
         ctx.textAlign = "center"
         ctx.fillText("Game Over, your score was: " + score.toString() , canvas.width/2, canvas.height/2-60)
         ctx.fillText("Your high score is: " + highScore.toString() , canvas.width/2, canvas.height/2-30)
