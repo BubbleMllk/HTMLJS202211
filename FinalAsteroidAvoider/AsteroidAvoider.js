@@ -14,7 +14,7 @@ var Rship = new Image()
 Rship.src = "images/rocketship.png"
 
 function drawrocket(){
-    ctx.drawImage(Rship, 20,20)
+    ctx.drawImage(Rship,-10, 10, 30, 30)
 }
 
 
@@ -146,19 +146,19 @@ function PlayerShip(){
         if(this.up || this.left || this.right){
             ctx.save()
             //Changes the drawing values to animate the flame
-            if(this.flamelength == 10){
-                this.flamelength = 5
+            if(this.flamelength == 30){
+                this.flamelength = 20
                 ctx.fillStyle = "yellow"
             }else{
                 
-                this.flamelength = 10
+                this.flamelength = 30
                 ctx.fillStyle = "purple"
             }
             ctx.beginPath()
-            ctx.moveTo(0, this.flamelength)
-            ctx.lineTo(-5,-10)
-            ctx.lineTo(-20,0)
-            ctx.lineTo(0,this.flamelength)
+            ctx.moveTo(-50, this.flamelength)
+            ctx.lineTo(-3,15)
+            ctx.lineTo(-5,30)
+            ctx.lineTo(-60,this.flamelength)
             ctx.closePath()
             ctx.fill()
             ctx.restore()
@@ -166,14 +166,14 @@ function PlayerShip(){
 
         }
         // ctx.fillStyle = "black"
-        // ctx.beginPath()
-        // ctx.moveTo(0, -10)
+        ctx.beginPath()
+        ctx.moveTo(0, -10)
         // ctx.lineTo(15, 3)
         // ctx.lineTo(-1, 10)
         // ctx.lineTo(0, -10)
-        // ctx.closePath()
+        ctx.closePath()
         // ctx.fill();
-        drawrocket(1,1)
+        drawrocket()
         ctx.restore() 
     }
 
