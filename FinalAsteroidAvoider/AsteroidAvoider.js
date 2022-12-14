@@ -27,6 +27,8 @@ metor.src = "images/meteor.png"
 // }
 
 
+
+
 //image for main menu
 var imgmenu = new Image()
 imgmenu.src = "images/mainmenu.png"
@@ -36,7 +38,7 @@ imgmenu.onload = function(){
 }
 
 var endgame = new Image()
-endgame.src = "images/endgame.png"
+endgame.src = "images/endmenu.png"
 
 endgame.onload = function(){
     main();
@@ -313,7 +315,7 @@ gameStates[2] = function(){
         //set a new high score
         highScore = score
         ctx.save()
-        ctx.drawImage(imgmenu,0,0, canvas.width, canvas.height)
+        ctx.drawImage(endgame,0,0, canvas.width, canvas.height)
         ctx.font = "30px Arial"
         ctx.strokeStyle = "white"
         ctx.fillStyle = "black"
@@ -332,7 +334,7 @@ gameStates[2] = function(){
     }else{
         //keep same score new high score
         ctx.save()
-        ctx.drawImage(imgmenu,0,0, canvas.width, canvas.height)
+        ctx.drawImage(endgame,0,0, canvas.width, canvas.height)
         ctx.font = "30px Arial"
         ctx.fillStyle = "black"
         ctx.strokeStyle = "white"
