@@ -240,12 +240,12 @@ function PlayerShip(){
 gameStates[0] = function(){
     ctx.save()
     ctx.drawImage(imgmenu,0,0, canvas.width, canvas.height)
-    ctx.font = "30px Arial"
-    ctx.fillStyle = "black"
-    ctx.textAlign = "center"
-    ctx.fillText("Asteroid Avoider", canvas.width/2, canvas.height/2-30)
-    ctx.font = "15px Arial"
-    ctx.fillText("Press Space to Start", canvas.width/2, canvas.height/2 + 20)
+    // ctx.font = "30px Arial"
+    // ctx.fillStyle = "black"
+    // ctx.textAlign = "center"
+    // ctx.fillText("Asteroid Avoider", canvas.width/2, canvas.height/2-30)
+    // ctx.font = "15px Arial"
+    // ctx.fillText("Press Space to Start", canvas.width/2, canvas.height/2 + 20)
     ctx.restore()
 
 }
